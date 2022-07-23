@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz App</title>
+</head>
+<body>
+    <div id="container">
+        <div id="intro">
+            <!-- <h1>Welcome</h1> -->
+            <h2 id="headerText"></h2> 
+        </div>
+
+        <div id="greetingInput">
+            <button class="startButton" onclick="greeting()">Start Quiz</button>
+        </div>
+        <h2 id="total"></h2>
+
+        <div id="quiz">
+            <h3 id="question"></h3>
+            <div id="answerA" onclick="afunction()"></div>
+            <div id="answerB" onclick="bfunction()"></div>
+            <div id="answerC" onclick="cfunction()"></div>
+            <div id="answerD" onclick="dfunction()"></div> <br>
+
+            <div class="qn1Button" onclick="submitQn1()"><button class="next1">Next</button></div>
+            <div class="qn2Button" onclick="submitQn2()"><button class="next2">Next</button></div>
+            <div class="qn3Button" onclick="submitQn3()"><button class="submit">Submit</button></div>
+            <h4 id="timer"></h4>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
