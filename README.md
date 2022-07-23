@@ -1,6 +1,6 @@
 # Quiz App
 
-A Simple Programming Quiz App
+A Simple JavaScript Quiz App
 
 ## Table of Content 
 - Requirement 

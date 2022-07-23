@@ -176,7 +176,7 @@ body {
 }
 
 #total {
-    color: black;
+    color: black ;
     padding: 200px 300px;
     font-size: 25px;
 }
@@ -186,7 +186,6 @@ body {
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
 }
-
 
 
 

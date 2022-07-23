@@ -16,20 +16,20 @@ let iterationNumber = 0;
 let qnChoice = "";
 let score = 0;
 
-// create question
+// question
 let questionList = [
     "Qn1: Inside which HTML element do we put the JavaScript?",
     "Qn2: Where is the correct place to insert a JavaScript?",
     "Qn3: What is the correct syntax for referring to an external script called xxx.js?"
 ]
 
-// create options
+// options to the questions
 let aAnswer = ["scripting tag", "The head tag sction", "script href='xxx.js'"]
 let bAnswer = ["javascript tag", "the body tag section", "script source='xxx.js'"]
 let cAnswer = ["js tag", "The link section tag", "script src='xxx.js'"]
 let dAnswer = ["script tag", "the title section tag", "script name='xxx.js"]
 
-
+// setting this items not to display when the app launches
 quiz.style.display = "none";
 qn1Button.style.display = "none";
 qn2Button.style.display = "none";
@@ -37,7 +37,7 @@ qn3Button.style.display = "none";
 total.style.display = "none";
 timer.style.display = "none";
 
-// A reset function which gives the options default color 
+// A reset function which gives the options default color of lightblu background 
 //and iterates the questions and options
 function reset() {
     answerA.style.backgroundColor = "rgb(62, 166, 201)";
@@ -52,9 +52,9 @@ function reset() {
     answerD.innerHTML = dAnswer[iterationNumber];
 }        
 
-
+// start quiz button function
 function greeting() {
-    headerText.innerHTML = ""
+    // headerText.innerHTML = ""
     greetingInput.style.display = "none"
     quiz.style.display = "block"
     qn1Button.style.display = "block"
@@ -67,6 +67,7 @@ function greeting() {
     startCountdown();
 }
 
+// option A function
 function afunction() {
     answerA.style.backgroundColor = "red";
     answerB.style.backgroundColor = "lightblue";
@@ -75,7 +76,7 @@ function afunction() {
     qnChoice = "a";
 }
 
-
+// option B function
 function bfunction() {
     answerA.style.backgroundColor = "lightblue";
     answerB.style.backgroundColor = "red";
@@ -84,7 +85,7 @@ function bfunction() {
     qnChoice = "b";
 }
 
-
+// option C function
 function cfunction() {
     answerA.style.backgroundColor = "lightblue";
     answerB.style.backgroundColor = "lightblue";
@@ -93,7 +94,7 @@ function cfunction() {
     qnChoice = "c";
 }
 
-
+// option D function
 function dfunction() {
     answerA.style.backgroundColor = "lightblue";
     answerB.style.backgroundColor = "lightblue";
@@ -102,6 +103,8 @@ function dfunction() {
     qnChoice = "d";
 }
 
+
+// first Next button function
 function submitQn1() {
     if (qnChoice == "d") {
         score += 1;
@@ -113,7 +116,7 @@ function submitQn1() {
     reset();
 }
 
-
+// second Next function
 function submitQn2() {
     if (qnChoice == "b") {
         score += 1;
@@ -125,6 +128,7 @@ function submitQn2() {
     reset();  
 }
 
+// third Next function
 function submitQn3() {
     if (qnChoice == "c") {
         score += 1;
@@ -138,6 +142,7 @@ function submitQn3() {
     reset();
 }
 
+// total score function
 function totalScore() {
     let quizTotal = `
     <p>Quiz Completed<p>
@@ -157,7 +162,7 @@ let quizTimeInMinutes = time * 60 * 60;
 let quizTime = quizTimeInMinutes / 60;
 
 function startCountdown() {
-    let quizTimer = setInterval(function() {
+    let quizTimer = setInterval(() => {
         if(quizTime <= 0) {
             clearInterval(quizTimer)
             submitQn3();
